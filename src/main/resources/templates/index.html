@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Desafio Linx</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h1 class="mb-4 text-primary">Homologaçã de Extratos</h1>
+
+    <div th:if="${mensagem}" class="alert alert-success" th:text="${mensagem}"></div>
+    <div th:if="${erro}" class="alert alert-danger" th:text="${erro}"></div>
+
+    <div class="card p-4 mb-4">
+        <form action="/upload" method="post" enctype="multipart/form-data" class="row g-3">
+            <div class="col-auto">
+                <input type="file" name="arquivo" class="form-control" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-success">Importar Arquivo</button>
+            </div>
+        </form>
+    </div>
+
+    <form action="/" method="get" class="row g-3 mb-3">
+        <div class="col-auto">
+            <input type="date" name="inicio" class="form-control">
+        </div>
+        <div class="col-auto">
+            <input type="date" name="fim" class="form-control">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Filtrar por Data</button>
+        </div>
+    </form>
+    <div class="mb-3">
+    <strong>Filtrar por Valor:</strong>
+    <div class="btn-group" role="group">
+        <a href="/" class="btn btn-secondary">Padrão</a>
+
+        <a href="/?sort=menor" class="btn btn-outline-primary">
+            ⬇️ Menor Valor
+        </a>
+
+        <a href="/?sort=maior" class="btn btn-outline-primary">
+            ⬆️ Maior Valor
+        </a>
+    </div>
+</div>
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Data</th>
+                <th>Hora</th>
+                <th>Estabelecimento</th>
+                <th>Bandeira</th>
+                <th>NSU</th>
+                <th>Valor Bruto</th>
+                <th>Valor Líquido</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="v : ${vendas}">
+                <td th:text="${#temporals.format(v.dataEvento, 'dd/MM/yyyy')}"></td>
+                <td th:text="${v.horaEvento}"></td>
+                <td th:text="${v.estabelecimento}"></td>
+                <td th:text="${v.bandeira}"></td>
+                <td th:text="${v.nsu}"></td>
+                <td th:text="'R$ ' + ${v.valorTotal}"></td>
+                <td th:text="'R$ ' + ${v.valorLiquido}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
