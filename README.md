@@ -26,7 +26,7 @@ Clone este repositório para sua máquina, usando o comando no terminal: git clo
 
 Segundo Passo:
 
-Abra o arquivo no terminal e rode o comando: mvnw.cmd spring-boot:run ou ./mvnw spring-boot:run. Ou rode o executável ApiDesafioLinxApplication.java na IDE. Para visualizar a página web, abra no navegador http://localhost:8080/   
+Abra o arquivo no terminal e rode o comando: .\mvnw.cmd spring-boot:run ou ./mvnw spring-boot:run. Ou rode o executável ApiDesafioLinxApplication.java na IDE. Para visualizar a página web, abra no navegador http://localhost:8080/   
 O arquivo de exemplo está presente na pasta para teste.
 
 Testes:
