@@ -9,11 +9,11 @@ Spring Boot 3.5.10 (Web, Data JPA, Thymeleaf)
 
 H2 Database
 
-Maven (Gerenciamento de dependências e Build)
+Maven
 
-JUnit 5 e Mockito (Testes Unitários e de Integração)
+JUnit 5 e Mockito (Testes)
 
-Bootstrap (Interface gráfica)
+Bootstrap 
 
 
 Como Rodar: 
