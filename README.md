@@ -22,13 +22,11 @@ Pré-requisito: Java 21.
 
 Primeiro Passo: 
 
-Clone este repositório para sua máquina, usando o comando no terminal: git clone https://github.com/jotapemoura/desafio_processo_seletivo_Linx_JoaoPedroMoura
-Ou faça download do arquivo pelo repositório.
+Clone este repositório para sua máquina, usando o comando no terminal: git clone https://github.com/jotapemoura/desafio_processo_seletivo_Linx_JoaoPedroMoura. Ou faça download do arquivo pelo repositório.
 
 Segundo Passo:
 
-Abra o arquivo no terminal e rode o comando: mvnw.cmd spring-boot:run ou ./mvnw spring-boot:run
-Ou rode o executável ApiDesafioLinxApplication.java na IDE. 
+Abra o arquivo no terminal e rode o comando: mvnw.cmd spring-boot:run ou ./mvnw spring-boot:run. Ou rode o executável ApiDesafioLinxApplication.java na IDE. 
 
 Testes:
 Para rodar os testes abre o arquivo no terminal e rode o comando: ./mvnw clean test
